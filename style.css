@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans:wght@700&family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    z-index: 99999999;
+    left: 0;
+}
+.menu-wrap .tonggler{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+}
+.menu-wrap .humberger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: blue;
+    display: flex;
+    opacity: 0.7;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menu-wrap .humberger span{
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.4s ease;
+}
+.menu{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    visibility: hidden;
+}
+.menu > div{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(24, 39, 51, 0.85);
+    align-items: center;
+    flex: none;
+    width: 300vw;
+    height: 300vw;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+.menu .wrap-menu{
+    text-align: left;
+    max-width: 90vw;
+    max-height: 100vh;
+    transition: opacity 0.4s ease;
+}
+.menu .wrap-menu ul{
+    display: block;
+    list-style: none;
+}
+.menu .wrap-menu ul li{
+    padding: 15px;
+}
+.menu .wrap-menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu-wrap .tonggler:checked ~ .menu{
+    visibility: visible;
+}
+.menu-wrap .tonggler:checked ~ .menu > div{
+    transform: scale(1);
+    transition-duration: 0.4s;
+    background-repeat: no-repeat;
+}
+.menu-wrap .toggler:checked ~ .menu .wrap-menu {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+}
+.menu-wrap .toggler:checked ~ .menu .humberger > span{
+    background: tomato;
+    position: absolute;
+}
+.jumbotron::before{
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+    background: linear-gradient(rgb(255,255,255,.0), rgb(0,0,0,0.3));
+    position: absolute;
+}
+.jumbotron{
+    background-image: url(https://www.ruangpengantin.com/demo/scroll005/img/header-bg.jpg?version=1575912195);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.jumbotron .name-hero, .jumbotron .tanggalan{
+    font-family: 'Yellowtail', cursive;
+    font-weight: bold;
+    font-size: 60px;
+    color: #E4E9D0;
+}
+.jumbotron .col-lg{
+    margin-top: 450px;
+}
+.jumbotron .schroll-item a{
+    padding-top: 60px;
+}
+.jumbotron .schroll-item span{
+    animation: apaaja 2s infinite;
+    bottom: 80px;
+    position: absolute;
+    width: 25px;
+    transform: rotate(-45deg);
+    height: 25px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+@keyframes apaaja{
+    0% {
+	    transform: rotate(-45deg) translate(0, 0);
+	  }
+	  20% {
+	    transform: rotate(-45deg) translate(-10px, 10px);
+	  }
+	  40% {
+	    transform: rotate(-45deg) translate(0, 0);
+	  }
+}
+
+.spesial-invite .tamu{
+    font-family: "Futura ICG";
+    font-size: 18px;
+    color: #63676C;
+    font-weight: bold;
+}
+.qr-code p{
+    font-family: "Futura ICG";
+    font-size: 16px;
+    color: #63676C;
+    font-weight: bold;
+}
+.btn-qr{
+    background-color: transparent;
+    border: 1px solid #63676C;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-family: "Futura ICG";
+    font-weight: bold;
+    font-size: 16px;
+    color: #63676C;
+    transition: all 0.3s ease-in;
+}
+.btn-qr:hover, .share-moment .row a:hover,
+.profile .wanita a:hover, .profile .pria a:hover{
+    background-color: #63676C;
+    color: white;
+}
+.profile{
+    margin: 60px auto;
+}
+.profile .wanita h1, .profile .pria h1 {
+    font-family: "Liberator";
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #63676C;
+}
+.profile .wanita p, .profile .pria p{
+    font-weight: bold;
+    font-family: "Futura ICG";
+    color: #63676C;
+}
+.profile .wanita a, .profile .pria a{
+    transition: all 0.3s ease-in;
+    font-family: "Futura ICG";
+    font-weight: bold;
+    color: #63676C;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #63676C;
+}
+.profile .row:nth-last-child(1) div:nth-child(2) h1{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #63676C;
+    font-size: 100pt; 
+    margin-top: 0.2em;
+}
+.spesial-invite, .love-story, .pre-wedding, .rsvp, .share-moment, .footer{
+    background-image: url(https://www.ruangpengantin.com/demo/scroll005/img/hijau-bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.img-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    margin: 0 auto;
+}  
+
+.agenda{
+    background-image: url(https://www.ruangpengantin.com/demo/scroll005/img/agenda-bg-desktop.jpg?version=1575912196);
+    background-position: center center;
+    background-size: cover;
+    padding: 40px 0;
+    height: auto;
+}
+.agenda .akad h3, .agenda .resepsi h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+.agenda .place h1, .agenda .place h1{
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+.agenda .akad > i, .agenda .resepsi > i{
+    font-size: 50px;
+    margin-top: 50px;
+    color: #fff;
+}
+.agenda .jam, .agenda .alamat {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+.agenda .jam{
+    color: #EAF1D8;
+    margin: 20px auto;
+}
+.agenda .alamat{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+}
+.agenda a{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+}
+.agenda a:hover{
+    background-color: white;
+    color: #63676C;
+}
+.agenda .row{
+    padding-top: 20rem;
+}
+.hitung-mundur table{
+    width: 30%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.love-story .row:nth-child(2) h3{
+    font-family: "Liberator";
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: #63676C;
+    margin: 15px;
+    font-weight: bold;
+}
+.love-story .row:nth-child(2) p{
+    font-family: "Futura ICG";
+    line-height: 28px;
+    color: #63676C;
+    font-weight: bold;
+}
+
+.pengiring .row:nth-child(2) h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 15px;
+    letter-spacing: 1px;
+    color: #63676C;
+}
+.pengiring .row:nth-child(2) p{
+    font-family: "Futura ICG";
+    font-weight: bold;
+    line-height: 28px;
+    color: #63676C;
+}
+.pengiring .row:nth-child(2) a{
+    border: 1px solid #63676C;
+    color: #63676C;
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+    font-family: "Futura ICG";
+    padding: 5px 10px;
+    font-weight: bold;
+    margin: 30px;
+    display: block;
+}
+.pre-wedding .resize{
+    width: 100%;
+}
+.rsvp p{
+    font-weight: bold;
+    color: #63676C;
+    margin: 30px;
+}
+.rsvp .formulir .form-group label{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: "Futura ICG";
+    color: #63676C;
+}
+.rsvp .formulir .form-group input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #63676C;
+    border-radius: 0px;
+}
+.rsvp .formulir .form-group input::placeholder, 
+.rsvp .formulir .form-group textarea::placeholder,
+.rsvp .formulir .form-group select::placeholder
+{
+    opacity: 0.5;
+    font-family: "Futura ICG";
+    color: #63676C;
+    font-weight: bold;
+}
+.rsvp .formulir .form-group textarea, .rsvp .formulir .form-group select{
+    font-weight: bold;
+    border: 2px solid #63676C;
+    background-color: transparent;
+    color: #a2a5a9;
+}
+.rsvp .formulir button{
+    padding: 5px 20px;
+    background-color: #FCFBF7;
+    color: #63676C;
+    font-weight: bold;
+    font-family: "Futura ICG";
+    margin: 15px 0;
+    transition: all 0.4s ease-in;
+    border: 0;
+}
+.rsvp .formulir button:hover,
+.pengiring .row:nth-child(2) a:hover{
+    color: white;
+    background-color: #63676C;
+}
+.buku-tamu .row:nth-child(2) input[type=submit]{
+    margin: 20px 0!important;
+}
+.share-moment .row p{
+    font-family: "Futura ICG";
+    font-weight: bold;
+    color: #63676C;
+    font-size: 18px;
+    margin: 15px 0;
+}
+.share-moment .row a{
+    text-decoration: none;
+    color: #63676C;
+    font-family: "Futura ICG";
+    transition: all 0.3s ease-in;
+    border: 1px solid #63676C;
+    padding: 5px 15px;
+    display: inline-block;
+    margin: 15px auto;
+}
+.thanksyou{
+    background-image: url(https://www.ruangpengantin.com/demo/scroll005/img/thankyou-bg.jpg?version=1575912198);
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+.thanksyou::after{
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+}
+.thanksyou h1{
+    font-family: 'Yellowtail', cursive;
+    color: #E4E9D0;
+    letter-spacing: 2px;
+    font-size: 70px;
+    opacity: 1;
+    z-index: 999999;
+    margin-top: 140px;
+}
+.thanksyou p{
+    color: #E4E9D0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.footer{
+    padding-bottom: 0!important;
+}
+
+@media screen and (max-width : 600px){
+    body{
+        max-width: 100%;
+    }
+    .agenda .akad h1, .agenda .resepsi h1{
+        font-size: 20px;
+    }
+    .agenda .akad h3, .agenda .resepsi h3{
+        font-size: 16px;
+    }
+    .agenda .resepsi {
+        margin-top: 10em;
+    }
+    .agenda .akad{
+        margin-top: -8em;
+    }
+    .agenda {
+        background: url(https://www.ruangpengantin.com/demo/scroll005/img/agenda-bg-mobile.jpg?version=1575952331);
+        background-position: center top;
+        background-size: cover;
+        padding: 0;
+    }
+    .hitung-mundur table p{
+        font-size: 15px;
+        margin: 10px;
+    }
+    .menu > div{
+        width: 209%;
+        border-radius: 80%;
+        height: 80%;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+    .menu .wrap-menu{
+        height: auto;
+    }
+    .menu .wrap-menu ul{
+        display: block;
+        height: 30%;
+    }
+}
